@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int num[10];
+	int nums, smallnum, smallNum, largenum, largeNum;
+	double average, total;
+	
+	cout << "This program will show the smallest and largest integer, the total," ;
+	cout << "\nand the average of the 10 numbers.";
+	
+	cout << "\n\nInput 10 numbers:" << endl;
+	for (nums = 0; nums < 10; nums++)
+		num[nums] = 0;
+	for (nums = 0; nums < 10; nums++)
+		cin >> num[nums];
+	for (nums = 0; nums < 10; nums++)
+	
+	smallnum = 0;
+	for (nums = 0; nums < 10; nums++)
+		if (num[smallnum] > num[nums])
+			smallnum = nums;
+	smallNum = num[smallnum];
+	
+	cout << "\n\nThe smallest number is: " << smallNum << endl;
+	
+	largenum = 0;
+	for (nums = 0; nums < 10; nums++)
+		if (num[largenum] < num[nums])
+			largenum = nums;
+	largeNum = num[largenum];
+	
+	cout << "The largest number is: " << largeNum << endl;
+	
+	total = 0;
+	for (nums = 0; nums < 10; nums++)
+		total = total + num[nums];
+		
+	average = total/10;
+		
+	cout << "The total of all numbers is: " << total << endl;	
+	cout << "The average of the 10 numbers is: " << average << endl;	
+	
+	return 0;
+}
