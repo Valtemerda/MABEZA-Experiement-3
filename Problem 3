@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+	char text[10];
+	int a, b, c, d;
+	
+	cout << "Enter text (maximum of 10 characters): " << endl; cin >> text;
+	
+	for (a = 0; a <= 10 - 1; a++)
+	{
+		for (b = 0; b <= 10 - a - 1; b++)
+		{
+			if (text[b] > text[b+1])
+			{
+				c = text[b];
+				text[b] = text[b+1];
+				text[b+1] = c;
+			}
+		}
+	}
+	
+	cout << "\n\nThe array elements after sorting is: ";
+	for (a = 0; a <= 10; a++)
+	{
+		cout << text[a];
+	}
+	return 0;
+}
